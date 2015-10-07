@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration>
+  <Appenders>
+    <!--<File name="file" fileName="/data/log/xjd.log" append="true">-->
+      <!--<PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss.SSS} %5p (%F:%M:%L) - %m%n"/>-->
+    <!--</File>-->
+    <!--<RollingFile name="rollingFile" fileName="/data/log/xjd.log" bufferSize="1024"-->
+      <!--filePattern="/data/log/$${date:yyyy-MM}/xjd-%d{yyyy-MM-dd}-%i.log.gz">-->
+      <!--<PatternLayout>-->
+        <!--<Pattern>%d{HH:mm:ss.SSS} %5p (%F:%L) - %m%n</Pattern>-->
+      <!--</PatternLayout>-->
+      <!--<Policies>-->
+        <!--<TimeBasedTriggeringPolicy/>-->
+        <!--<SizeBasedTriggeringPolicy size="250 MB"/>-->
+      <!--</Policies>-->
+    <!--</RollingFile>-->
+    <Console name="console" target="SYSTEM_OUT">
+      <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss.SSS} %5p (%F:%M:%L) - %m%n"/>
+    </Console>
+  </Appenders>
+  <Loggers>
+    <Logger name="com.xjd" level="info"/>
+    <Root level="info">
+      <AppenderRef ref="console"/>
+    </Root>
+  </Loggers>
+</Configuration>
